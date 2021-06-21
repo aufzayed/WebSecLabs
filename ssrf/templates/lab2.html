@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            SSRF Labs | 2
+        </title>
+        <style>
+            body{
+                background-color: #27272c;
+            }
+            
+            #cform {
+                text-align: center;
+                width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        
+            #ctitle {
+	            background-color: #C490E4;
+	            width: 400px;
+	            border-radius: 10px;
+	            padding: 10px;
+	            color: white;
+                font-family: mono;
+            }
+
+            #results {
+	            font-size: 50px;
+	            color: white;
+            }
+
+            button {
+                padding: 10px;
+                color: white;
+                background-color: black;
+                border: 3px solid #C490E4;
+                border-radius: 10px;
+                margin: 20px;
+            }
+
+            input {
+                padding: 10px;
+                width: 400px;
+            }
+        </style>
+    </head>
+    <body>  
+        <center>
+            <h1 id='ctitle'>check website</h1>
+        </center>
+        <div id='cform'>
+            <form action='/lab2' method='POST'>
+                <input type="text" name="site_url">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <br>
+        <br>
+        <center>
+            <div id='results'>
+                {{ result }}
+            </div>
+            <code style="color: white;">
+                {{ error }}
+            </code>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            SSRF Labs | 3 profile
+        </title>
+        <style>
+            body{
+                background-color: #27272c;
+            }
+            
+            #cform {
+                text-align: center;
+                width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        
+            #ctitle {
+	            background-color: #C490E4;
+	            width: 400px;
+	            border-radius: 10px;
+	            padding: 10px;
+	            color: white;
+                font-family: mono;
+            }
+
+            #results {
+	            font-size: 50px;
+	            color: white;
+            }
+
+            p {
+                color: white;
+                font-size: 30px;
+                border: 5px solid white;
+                width: 500px;
+                height: 300px;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>  
+        <center>
+            <h1 id='ctitle'>{{ username }}</h1>
+
+            <p> {{ discription | safe }} </p>
+        </center>
+        <br>
+        <br>
+        <center>
+            <div id='results'>
+                {{ result }}
+            </div>
+            <a href='/profile?username={{ username }}&to_pdf=true' style="color: white; font-size: 15px; text-decoration: none; border: 3px solid white; border-radius: 10px; padding: 2px;">Download your profile as a pdf file</a>
+        </center>
+    </body>
+</html>
