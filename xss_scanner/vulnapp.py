@@ -1,7 +1,5 @@
-#!/user/bin/python3
-
+#!/usr/bin/python3
 import html
-from types import resolve_bases
 from flask import *
 
 
