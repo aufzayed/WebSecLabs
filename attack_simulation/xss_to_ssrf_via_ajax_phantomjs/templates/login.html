@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+
+        body{
+            background-color: #FBF4E9;
+        }
+
+        div#main {
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 250px;
+            background-color: white;
+            box-shadow: 2px 2px 2px 2px black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+    <center>
+        <h1>Login</h1>
+    </center>
+    <br>
+    <br>
+    <center>
+    <form action="/login" method="POST">
+        <br>
+        <label>username</label>
+        <input type="text" name="username">
+        <br>
+        <br>
+        <label>password</label>
+        <input type="password" name="password">
+        <br>
+        <br>
+        <br>
+        <button type="submit">login</button>
+        <br>
+        <br>
+        {{error}}
+    </form>
+</center>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prfile - page</title>
+    <style>
+
+        body{
+            background-color: #FBF4E9;
+        }
+
+        div#myimg {
+            width: 200px;
+            height: 200px;
+            border: 3px solid #4B3869;
+            border-radius: 50%;
+            background-image: url('/image?id=1');
+            background-repeat: no-repeat;
+            background-size: 280px;
+            background-position: center;
+        }
+
+        div#main {
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            box-shadow: 2px 2px 2px 2px black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+    <center>
+        <div id='myimg'></div>
+        <br>
+        <h1>{{username}}</h1>
+        <br>
+        {{about | safe}}
+        <br>
+        <br>
+        {{pdf_export | safe}}
+        <br>
+        <br>
+        <form action="/profile" method="POST">
+            <textarea name="bio" cols="30" rows="10" style="margin: 0px; width: 457px; height: 153px;"></textarea>
+            <br>
+            <br>
+            <button type="submit">Update bio</button>
+        </form>
+        <br>
+        <br>
+        <h1>
+            <a href="/logout">Logout</a>
+            <br>
+            <br>
+            <a href="/">Home</a>
+        </h1>
+    </center>
+</div>
+</body>
+</html>
